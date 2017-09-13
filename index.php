@@ -5,9 +5,11 @@
 
         <link rel="stylesheet" href="css/reveal.css" />
         <link rel="stylesheet" href="css/theme/black.css" />
+
+        <link rel="stylesheet" href="plugin/highlight/zenburn.css">
     </head>
     <body>
-        <div class="reveal">
+        <div class="reveal" id="app">
             <div class="slides">
                 <?php
                 $dir = new DirectoryIterator('slides');
@@ -18,12 +20,32 @@
                 ?>
             </div>
         </div>
+
+        <script src="js/head.min.js"></script>
         <script src="js/reveal.js"></script>
-        <script>
-            Reveal.initialize({
-                slideNumber: true,
-                history: true
-            });
-        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
     </body>
+
+    <script>
+    angular.module('aula', [], function($interpolateProvider) {
+        $interpolateProvider.startSymbol('[[');
+        $interpolateProvider.endSymbol(']]');
+    });
+    </script>
+
+    <script>
+        var bootstrap = function() {
+            var div = document.getElementById('app');
+            angular.bootstrap(div, ['aula']);
+        };
+
+        Reveal.initialize({
+            slideNumber: true,
+            history: true,
+            dependencies: [
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js', async: true, callback: bootstrap }
+            ]
+        });
+    </script>
 </html>

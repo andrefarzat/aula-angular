@@ -1393,3 +1393,39 @@ body {
 .refs { font-size: 1rem !important; }
 
 .logo {width: 250px; display: inline-block; margin-right: 24px !important; vertical-align: middle !important; }
+
+.media {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.media + .media {
+  margin-top: 10px;
+}
+
+.media-left {
+  margin-right: 10px;
+  float: left;
+}
+
+.media-right {
+  margin-left: 10px;
+  float: right;
+}
+
+.media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+.input {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 0.2rem;
+}
+
+.textarea {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  padding: 0.2rem;
+}
