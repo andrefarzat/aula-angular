@@ -78,8 +78,8 @@
 
         <div class="fragment">
             <h3><small>Ternário</small></h3>
-            <pre><code data-trim class="html" style="text-align: center;"><input ng-model="c" /> {{ c.length > 5 ? 'Palavra grande' : 'Palavra pequeno' }}</code></pre>
-            <pre><input type="text" ng-model="c" class="input" /> = [[ c.length > 5 ? 'Palavra grande' : 'Palavra pequeno' ]]</pre>
+            <pre><code data-trim class="html" style="text-align: center;"><input ng-model="c" /> {{ c.length > 5 ? 'Palavra grande' : 'Palavra pequena' }}</code></pre>
+            <pre><input type="text" ng-model="c" class="input" /> = [[ c.length > 5 ? 'Palavra grande' : 'Palavra pequena' ]]</pre>
         </div>
     </section>
 
