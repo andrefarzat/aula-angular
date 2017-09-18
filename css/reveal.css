@@ -1429,3 +1429,11 @@ body {
   line-height: 1.2rem;
   padding: 0.2rem;
 }
+
+.btn {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: lightgray;
+  vertical-align: middle;
+}

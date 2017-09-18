@@ -2,11 +2,11 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+        <title>Aula Angular</title>
         <link rel="stylesheet" href="css/reveal.css" />
         <link rel="stylesheet" href="css/theme/black.css" />
 
-        <link rel="stylesheet" href="plugin/highlight/zenburn.css">
+        <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
     </head>
     <body>
         <div class="reveal" id="app">
@@ -27,10 +27,29 @@
     </body>
 
     <script>
-    angular.module('aula', [], function($interpolateProvider) {
+    var app = angular.module('aula', [], function($interpolateProvider) {
         $interpolateProvider.startSymbol('[[');
         $interpolateProvider.endSymbol(']]');
     });
+
+    app.controller('Ctrl01', function($scope) {
+        $scope.valor = 'Qualquer valor';
+    });
+
+    app.controller('Ctrl02', function($scope) {
+        $scope.valor = 0;
+
+        $scope.adicionar = function(valor) {
+            $scope.valor += valor;
+        };
+
+        $scope.reduzir = function(valor) {
+            $scope.valor -= valor;
+        }
+    });
+
+    app.controller('MainController', function($scope){});
+    app.controller('AnotherController', function($scope){});
     </script>
 
     <script>
