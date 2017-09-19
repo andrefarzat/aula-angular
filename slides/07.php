@@ -15,7 +15,7 @@
         <h2>ng-controller</h2>
 
         <h3><small>controller.js</small></h3>
-<pre><code data-trim class="js" style="text-align: left;">app.controller('MainController', function($scope) {
+<pre><code data-trim class="javascript" style="text-align: left;">app.controller('MainController', function($scope) {
     $scope.valor = "Qualquer valor";
 });</code></pre>
 
@@ -31,7 +31,7 @@
         <h2>Eventos e Métodos</h2>
 
         <h3><small>controller.js</small></h3>
-<pre><code data-trim class="js" style="text-align: left;">app.controller('MainController', function($scope) {
+<pre><code data-trim class="javascript" style="text-align: left;">app.controller('MainController', function($scope) {
     $scope.valor = 0;
 
     $scope.adicionar = function(valor) {
@@ -63,32 +63,31 @@
     </section>
 
     <section>
-        <h2>ng-model + $scope</h2>
+        <h2>Escopo de Controllers</h2>
 
         <h3><small>index.html</small></h3>
         <?php $html = "<div ng-app='projeto'>
     <div ng-controller='MainController'>
-        MainController.valor = {{ valor }} <br />
-        <input type='text' ng-model='valor' />
+        <input type='text' ng-model='valor' /> <br />
+        MainController.valor = {{ valor }}
     </div>
-
     <div ng-controller='AnotherController'>
-        AnotherController.valor = {{ valor }} <br />
-        <input type='text' ng-model='valor' />
+        <input type='text' ng-model='valor' /> <br />
+        AnotherController.valor = {{ valor }}
     </div>
 </div>"; ?>
 
         <pre><code data-trim data-noescape class="html" style="text-align: left;"><?php echo htmlspecialchars($html); ?></code></pre>
 
-        <div ng-app='projeto'>
+        <div>
             <div ng-controller='MainController'>
-                MainController.valor = [[ valor ]] <br />
-                <input type='text' ng-model='valor' />
+                <input type='text' ng-model='valor' class="input" /> <br />
+                <small>MainController.valor = [[ valor ]]</small>
             </div>
 
             <div ng-controller='AnotherController'>
-                AnotherController.valor = [[ valor ]] <br />
-                <input type='text' ng-model='valor' />
+            <input type='text' ng-model='valor' class="input" /> <br />
+                <small>AnotherController.valor = [[ valor ]]</small>
             </div>
         </div>
     </section>

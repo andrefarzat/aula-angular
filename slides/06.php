@@ -6,21 +6,21 @@
     <section>
         <h2>Módulos</h2>
 
-        <pre><code data-trim class="js" style="text-align: center;">var app = angular.module('legal', []);</code></pre>
+        <pre><code data-trim class="javascript" style="text-align: center;">var app = angular.module('legal', []);</code></pre>
 
         <div class="fragment">
             <h2>Um módulo pode ter:</h2>
-            <pre><code data-trim class="js" style="text-align: left;">app.config(function() { ... });</code></pre>
-            <pre><code data-trim class="js" style="text-align: left;">app.controller('LegalController', function() { ... });</code></pre>
-            <pre><code data-trim class="js" style="text-align: left;">app.service('LegalService', function() { ... });</code></pre>
-            <pre><code data-trim class="js" style="text-align: left;">app.directive('legalDirective', function() { ... });</code></pre>
-            <pre><code data-trim class="js" style="text-align: left;">app.constant('LEGAL', 'VALOR_LEGAL');</code></pre>
+            <pre><code data-trim class="javascript" style="text-align: left;">app.config(function() { ... });</code></pre>
+            <pre><code data-trim class="javascript" style="text-align: left;">app.controller('LegalController', function() { ... });</code></pre>
+            <pre><code data-trim class="javascript" style="text-align: left;">app.service('LegalService', function() { ... });</code></pre>
+            <pre><code data-trim class="javascript" style="text-align: left;">app.directive('legalDirective', function() { ... });</code></pre>
+            <pre><code data-trim class="javascript" style="text-align: left;">app.constant('LEGAL', 'VALOR_LEGAL');</code></pre>
         </div>
     </section>
 
     <section>
         <h2>Dependência</h2>
-        <pre><code data-trim class="js" style="text-align: center;">app = angular.module('mais_legal', ['legal']);
+        <pre><code data-trim class="javascript" style="text-align: center;">app = angular.module('mais_legal', ['legal']);
 /* app refere ao módulo "mais_legal" agora */</code></pre>
     </section>
 

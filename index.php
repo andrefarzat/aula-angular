@@ -48,8 +48,44 @@
         }
     });
 
-    app.controller('MainController', function($scope){});
-    app.controller('AnotherController', function($scope){});
+    app.controller('MainController', function($scope) {});
+    app.controller('AnotherController', function($scope) {});
+    app.controller('MeuComponenteCtrl', function($scope) {
+        // Aqui
+        $scope.valor = 'Valor no escopo';
+    });
+
+    app.directive('meuComponente', function() {
+        return {
+            template: '<div>Meu Componente</div>'
+        };
+    });
+
+    app.directive('meuComponente2', function() {
+        return {
+            scope: { texto: '@' },
+            template: '<div>{{ texto }}</div>'
+        };
+    });
+
+    app.directive('meuComponente3', function() {
+        return {
+            scope: {step: '@'},
+            controller: function($scope) {
+                $scope.valor = 0;
+                $scope.adicionar = function() { $scope.valor += parseInt($scope.step, 10); };
+            },
+            template: '<div ng-click="adicionar()">{{ valor }}</div>'
+        };
+    });
+
+    app.directive('meuComponente4', function() {
+        return {
+            controller: 'MeuComponenteCtrl',
+            templateUrl: 'templates/meu-componente.html'
+        };
+    });
+
     </script>
 
     <script>
@@ -61,6 +97,9 @@
         Reveal.initialize({
             slideNumber: true,
             history: true,
+            width: 1024,
+            height: 700,
+            margin: 0,
             dependencies: [
                 { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 { src: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js', async: true, callback: bootstrap }
