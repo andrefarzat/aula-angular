@@ -49,11 +49,8 @@
     });
 
     app.controller('MainController', function($scope) {});
+
     app.controller('AnotherController', function($scope) {});
-    app.controller('MeuComponenteCtrl', function($scope) {
-        // Aqui
-        $scope.valor = 'Valor no escopo';
-    });
 
     app.directive('meuComponente', function() {
         return {
@@ -85,6 +82,12 @@
             templateUrl: 'templates/meu-componente.html'
         };
     });
+
+    app.controller('MeuComponenteCtrl', function($scope) {
+        // Aqui
+        $scope.meuValor = 'Valor no escopo';
+    });
+
 
     </script>
 

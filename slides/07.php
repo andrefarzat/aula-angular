@@ -44,7 +44,7 @@
 });</code></pre>
     </section>
 
-    <section ng-controller="Ctrl02">
+    <section>
         <h2>Eventos e Métodos</h2>
     <h3><small>index.html</small></h3>
     <?php $html = "
