@@ -13,9 +13,16 @@
             <div class="slides">
                 <?php
                 $dir = new DirectoryIterator('slides');
+                $files = array();
                 foreach($dir as $fileinfo):
                     if ($fileinfo->isDot()) continue;
-                    include $fileinfo->getPathName();
+                    array_push($files, $fileinfo->getPathName());
+                endforeach;
+
+                asort($files);
+
+                foreach($files as $file):
+                    include $file;
                 endforeach;
                 ?>
             </div>
@@ -67,10 +74,10 @@
 
     app.directive('meuComponente3', function() {
         return {
-            scope: {step: '@'},
+            scope: {step: '<'},
             controller: function($scope) {
                 $scope.valor = 0;
-                $scope.adicionar = function() { $scope.valor += parseInt($scope.step, 10); };
+                $scope.adicionar = function() { $scope.valor += $scope.step; };
             },
             template: '<div ng-click="adicionar()">{{ valor }}</div>'
         };

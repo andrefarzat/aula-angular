@@ -48,7 +48,7 @@ app.directive('meuComponente', function() {
         <pre><code data-trim class="javascript" style="text-align: left;">
 app.directive('meuComponente', function() {
     return {
-        scope: {texto: '@'}, // @ means string
+        scope: {texto: '@'}, // '@' means string
         template: "<div>{{ texto }}</div>"
     };
 });</code></pre>
@@ -64,11 +64,11 @@ app.directive('meuComponente', function() {
         <pre><code data-trim class="javascript" style="text-align: left;">
 app.directive('meuComponente', function() {
     return {
-        scope: {step: '@'},
+        scope: {step: '<'}, // '<' means angular expression
         controller: function($scope) {
             $scope.valor = 0;
             $scope.adicionar = function() {
-                $scope.valor += parseInt($scope.step, 10);
+                $scope.valor += $scope.step;
             };
         },
         template: '<div ng-click="adicionar()">{{ valor }}</div>'
