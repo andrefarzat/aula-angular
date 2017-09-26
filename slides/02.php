@@ -17,17 +17,17 @@
     <section>
         <h4>Nessa época era...</h4>
         <h3>Modelo clássico da web</h3>
-        <img src="img/modelo-classico-web.png" alt="Modelo Classico Web" />
+        <img src="img/modelo-classico-web.png" alt="Modelo Classico Web" style="height: 50vh" />
     </section>
 
     <section>
         <h4>Mas em 2004 chegou o gmail</h4>
-        <img src="img/gmail-ui.png" />
+        <img src="img/gmail-ui.png" style="height: 80vh" />
     </section>
 
     <section>
         <h4>E o conceito de WEBAPP foi criado</h4>
-        <img src="img/modelo-webapp.png" />
+        <img src="img/modelo-webapp.png" style="height: 80vh" />
     </section>
 
     <section>
@@ -44,9 +44,9 @@
     </section>
 
     <section>
-        <img src="img/jquery/jquery.png" style="max-height: 30%" /><br />
-        <img src="img/jquery/jquery-ui.png" style="max-height: 15%" /><br />
-        <img src="img/jquery/jquery-mobile.png" style="max-height: 15%; width: 50%" />
+        <img src="img/jquery/jquery.png" style="max-height: 30vh" /><br />
+        <img src="img/jquery/jquery-ui.png" style="max-height: 15vh" /><br />
+        <img src="img/jquery/jquery-mobile.png" style="max-height: 15vh; width: 50vh" />
     </section>
 
     <section>
