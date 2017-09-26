@@ -17,7 +17,15 @@
     </section>
 
     <section>
-        <h2>WIP: Aqui vai entrar o link pro .zip ou instruções para criar o scaffolding do projeto</h2>
+        <h2>Download</h2>
+
+        <p>
+            <a href="//andrefarzat.com/aula-angular/app.zip" target="_blank">andrefarzat.com/aula-angular/app.zip</a>
+        </p>
+
+        <h2>Run</h2>
+
+        <pre><code data-trim data-noescape class="bash" style="text-align: center;">php -S 0.0.0.0:8000</code></pre>
     </section>
 
 </section>
