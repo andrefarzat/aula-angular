@@ -20,7 +20,7 @@
 
     <section>
         <h4>kiss / dry</h4>
-        <img src="img/kissdry.png" />
+        <img src="img/KISSDRY.png" />
 
         <h4>Keep It Simple, stupid!</h4>
         <h4>Don't Repeat yourself</h4>
