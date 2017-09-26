@@ -17,17 +17,17 @@
     <section>
         <h4>Nessa época era...</h4>
         <h3>Modelo clássico da web</h3>
-        <img src="img/modelo-classico-web.png" alt="Modelo Classico Web" style="height: 50%" />
+        <img src="img/modelo-classico-web.png" alt="Modelo Classico Web" />
     </section>
 
     <section>
         <h4>Mas em 2004 chegou o gmail</h4>
-        <img src="img/gmail-ui.png" height="80%" />
+        <img src="img/gmail-ui.png" />
     </section>
 
     <section>
         <h4>E o conceito de WEBAPP foi criado</h4>
-        <img src="img/modelo-webapp.png" style="height: 80%" />
+        <img src="img/modelo-webapp.png" />
     </section>
 
     <section>
